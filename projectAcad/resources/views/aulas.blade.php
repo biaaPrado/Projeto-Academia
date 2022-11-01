@@ -4,9 +4,15 @@
 
 @section('content')
 
-<form action="{{route('verAulas')}}" method="post">
+<form action="{{route('createAula')}}" method="post">
     @csrf
     <h1>Preencha aqui a data de suas aulas </h1>
+
+    @if (session('status'))
+            <div class="error">
+                {{ session('status') }}
+            </div>
+        @endif
 
     <div class="menu">
         <div>

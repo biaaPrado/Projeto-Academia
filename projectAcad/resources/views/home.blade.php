@@ -6,12 +6,18 @@
     <body class="antialiased">
         <h1>Projeto Academia </h1>
 
+        @if (session('status'))
+            <div class="error">
+                {{ session('status') }}
+            </div>
+        @endif
+
         <div class="menu">
             <div>
                 <h3>Faça login!</h3>
             </div>
 
-            <form action="{{route('menu')}}" method="post">
+            <form action="{{route('validating')}}" method="post">
                 @csrf
                 <div>
                     <label for="email">Email</label>

@@ -3,6 +3,7 @@
 @section('title', 'Cadastre-se')
 
 @section('content')
+
     <body class="antialiased">
         <h1>Projeto Academia </h1>
 

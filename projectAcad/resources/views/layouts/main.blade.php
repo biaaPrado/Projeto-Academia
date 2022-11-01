@@ -43,6 +43,16 @@
         h1{
             text-align: center;
         }
+
+        .error{
+            width: 450px;
+            background-color: red;
+            border: 1px solid;
+            border-radius: 5px;
+            text-align: center;
+            padding: 5px;
+            color: #FFF;
+        }
         </style>
     </head>
     <body class="antialiased">

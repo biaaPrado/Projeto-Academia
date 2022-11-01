@@ -14,6 +14,11 @@ class AulaController extends Controller
         $aula->contato = $request->contato;
 
         $aula->save();
+        return redirect('/verAula');
+    }
+
+    public function aula(Request $request){
+        return redirect('/verAula')->with('status', 'Aula cadastrada!');
     }
 
     public function show($id){

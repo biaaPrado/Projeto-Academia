@@ -24,7 +24,9 @@ Route::get('/logar', function(){
     return view('home'); // aqui ele vai para o login, logo após cadastrar
 })->name("home");
 
-Route::post('/menu', function(){
+Route::post('/validando_login', [UserController::class, 'login'])->name('validating');
+
+Route::get('/menu', function(){
     return view('menu'); // vai para o menu, após estar logado
 })->name('menu');
 
@@ -42,13 +44,13 @@ Route::get('/cadastrar_aulas', function(){
     return view('aulas');  // caso seja escolhido a opção cadastrar aulas
 })->name("aulas");
 
+Route::post('/salvando_aula', [AulaController::class, 'create'])->name('createAula');
+
 Route::get('/aulas/{$id}', [AulaController::class, 'show']);
 
 Route::post('/aulas', function(){
     return view('verAulas');  // após cadastrar a aula, visualiza as opções disponíveis
 })->name('verAulas');
-
-Route::controller('aula', 'AulaController');
 
 
 
