@@ -17,7 +17,7 @@
     <div class="menu">
         <div>
             <label for="name">Tipo:</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="tipo" id="name">
         </div>
 
         <div>
@@ -27,7 +27,7 @@
 
         <div>
             <label for="tel">Contato:</label>
-            <input type="text" name="tel" id="telefone">
+            <input type="text" name="contact" id="telefone">
         </div>
 
         <div>

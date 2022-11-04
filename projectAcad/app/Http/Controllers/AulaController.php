@@ -7,18 +7,17 @@ use App\Models\Aula;
 
 class AulaController extends Controller
 {
-    public function salvaAula(Request $request){
+    public function createAula(Request $request){
         $aula = new Aula;
         $aula->tipo = $request->tipo;
         $aula->dataAula = $request->dataAula;
-        $aula->contato = $request->contato;
-
+        $aula->contact = $request->contact;
         $aula->save();
-        return redirect('/verAula');
+        return redirect('/aulas');
     }
 
     public function aula(Request $request){
-        return redirect('/verAula')->with('status', 'Aula cadastrada!');
+        return redirect('/aulas')->with('status', 'Aula cadastrada!');
     }
 
     public function show($id){

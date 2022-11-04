@@ -12,4 +12,10 @@ class Aula extends Model
     public function cadastros(){
         return $this->belongsToMany('App\Models\Cadastro');
     }
+
+    protected $fillable = [
+        'tipo',
+        'dataAula',
+        'contact',
+    ];
 }

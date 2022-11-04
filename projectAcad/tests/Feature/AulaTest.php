@@ -4,8 +4,10 @@ namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+Use Illuminate\Support\Carbon;
 use Tests\TestCase;
 use App\Models\Aula;
+
 
 class AulaTest extends TestCase
 {
@@ -17,10 +19,12 @@ class AulaTest extends TestCase
      */
     public function test_cad_aula()
     {
-        $this->post('/verAulas', [
+        $mytime = Carbon::now();
+
+        $response = $this->post('/createAula', [
             'tipo'=> 'Musculação',
-            'dataAula'=> '10/11/2022',
-            'contato'=> '14 990999999'
+            'dataAula'=> $mytime,
+            'contact'=> '14 990999999'
         ]);
 
         $this->assertEquals(Aula::find(1)->tipo, "Musculação");
