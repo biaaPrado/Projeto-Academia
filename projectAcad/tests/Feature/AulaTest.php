@@ -8,7 +8,6 @@ Use Illuminate\Support\Carbon;
 use Tests\TestCase;
 use App\Models\Aula;
 
-
 class AulaTest extends TestCase
 {
     use RefreshDatabase;

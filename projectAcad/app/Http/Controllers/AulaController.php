@@ -13,18 +13,15 @@ class AulaController extends Controller
         $aula->dataAula = $request->dataAula;
         $aula->contact = $request->contact;
         $aula->save();
-        return redirect('/aulas');
+        return redirect()->route('mostraAula');
     }
 
     public function aula(Request $request){
         return redirect('/aulas')->with('status', 'Aula cadastrada!');
     }
 
-    public function show($id){
-        $aula = Aula::findOrFail($id);
-
-        return view('events.show', ['aula' => $aula]);
+    public function show(){
+        return view('verAulas', ['aulas' => Aula::all()]);
     }
-
 }
 

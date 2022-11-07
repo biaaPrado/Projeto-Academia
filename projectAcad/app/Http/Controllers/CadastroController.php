@@ -8,17 +8,19 @@ use App\Models\Cadastro;
 class CadastroController extends Controller
 {
     public function salvaCadastro(Request $request){
-        $aluno = new Cadastro;
-        $aluno->name = $request->name;
-        $aluno->dataNasc = $request->dataNasc;
-        $aluno->email = $request->email;
-
-        $aluno->save();
+        $cadastro = new Cadastro;
+        $cadastro->name = $request->name;
+        $cadastro->dataNasc = $request->dataNasc;
+        $cadastro->email = $request->email;
+        $cadastro->save();
+        return redirect()->route('mostraCadastro');
     }
 
-    public function perfil($id){
-        $cadastro = Event::findOrFail($id);
+    public function cadastro(Request $request){
+        return redirect('/perfil')->with('status', 'Cadastro feito com sucesso!');
+    }
 
-        return  view('cadastro.show', ['cadastro' => $cadastro]);
+    public function show(){
+        return view('perfil', ['cadastros' => Cadastro::all()]);
     }
 }

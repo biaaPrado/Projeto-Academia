@@ -14,25 +14,14 @@
             <th>CONTATO</th>
         </tr>
 
+        @foreach($aulas as $aula)
         <tr>
-            <th>1</th>
-            <th>2</th>
-            <th>3</th>
+            <th>{{$aula->id}}</th>
+            <th>{{$aula->tipo}}</th>
+            <th>{{$aula->dataAula}}</th>
+            <th>{{$aula->contact}}</th>
         </tr>
-
-        <tr>
-            <th>1</th>
-            <th>2</th>
-            <th>3</th>
-        </tr>
-        
-        <tr>
-            <th>1</th>
-            <th>2</th>
-            <th>3</th>
-        </tr>
-
-
+        @endforeach
     </table>
 </div>
 
