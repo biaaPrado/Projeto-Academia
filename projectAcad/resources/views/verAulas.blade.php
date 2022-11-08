@@ -5,7 +5,7 @@
 @section('content')
 
 <h1>Aulas Cadastradas</h1>
-<div class="menu">
+<div class="menu2">
     <table>
         <tr>
             <th>ID</th>

@@ -4,7 +4,7 @@
 
 @section('content')
 
-<form action="{{route('perfil')}}" method="post">
+<form action="{{route('salvaCadastro')}}" method="post">
     @csrf
     <h1>Registre seu perfil</h1>
 

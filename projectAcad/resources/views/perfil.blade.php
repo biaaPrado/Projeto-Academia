@@ -4,8 +4,8 @@
 
 @section('content')
 
-<h1>Seja bem vindo ao seu perfil</h1>
-<div class="menu">
+<h1>Lista de cadastros</h1>
+<div class="menu2">
     <table>
         <tr>
             <th>ID</th>

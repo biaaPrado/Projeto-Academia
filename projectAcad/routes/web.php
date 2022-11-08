@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AulaController;
+use App\Http\Controllers\CadastroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,7 +44,7 @@ Route::post('/salvaCadastro', [CadastroController::class, 'salvaCadastro'])->nam
 
 Route::post('/validatingCadastro', [CadastroController::class, 'cadastro'])->name('validatingCadastro');
 
-Route::get('/mostraCadastro', [CadastroController::class, 'show'])->name('mostraCadastro');
+Route::get('/perfil', [CadastroController::class, 'show'])->name('perfil');
 
 Route::post('/perfil', function() {
     return view('perfil'); // após o aluno se cadastrar, a pessoa visualiza seu perfil
@@ -59,10 +60,10 @@ Route::post('/createAula', [AulaController::class, 'createAula'])->name('createA
 
 Route::post('/validatingAula', [AulaController::class, 'aula'])->name('validatingAula');
 
-Route::get('/mostraAula', [AulaController::class, 'show'])->name('mostraAula'); //recebe o metódo show dpo controller que fará retorno com a exibição dos dados na view
+Route::get('/aulas', [AulaController::class, 'show'])->name('aulas'); //recebe o metódo show dpo controller que fará retorno com a exibição dos dados na view
 
-Route::get('/aulas', function(){
+Route::post('/aulas', function(){
     return view('verAulas');  // após cadastrar a aula, visualiza os dados cadastrados
-})->name('verAulas');
+})->name('aulas');
 
 

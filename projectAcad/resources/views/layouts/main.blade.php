@@ -34,6 +34,19 @@
             border: 1px solid;
             line-height: 45px;
         }
+
+        .menu2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 1000px;
+            background-color: rgb(106, 95, 95);
+            text-align: center;
+            border-radius: 5px;
+            border: 1px solid;
+            line-height: 45px;
+        }
+
         input{
             font-size: 16px;
             padding: 10px;

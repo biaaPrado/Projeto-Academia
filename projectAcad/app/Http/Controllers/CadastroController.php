@@ -13,7 +13,7 @@ class CadastroController extends Controller
         $cadastro->dataNasc = $request->dataNasc;
         $cadastro->email = $request->email;
         $cadastro->save();
-        return redirect()->route('mostraCadastro');
+        return redirect()->route('perfil');
     }
 
     public function cadastro(Request $request){

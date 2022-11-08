@@ -13,7 +13,7 @@ class AulaController extends Controller
         $aula->dataAula = $request->dataAula;
         $aula->contact = $request->contact;
         $aula->save();
-        return redirect()->route('mostraAula');
+        return redirect()->route('aulas');
     }
 
     public function aula(Request $request){
